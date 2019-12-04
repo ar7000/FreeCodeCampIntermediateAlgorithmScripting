@@ -1,15 +1,17 @@
-let alph = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-
 function fearNotLetter(str) {
-  let index = alph.indexOf(str[0]);
-  for(let i = 0; i < str.length; i++){
-    if(str[i] === alph[index]){
-      index++;
-    } else {
-      return alph[index];
+    
+    for (let i = 0; str.charCodeAt(i) < 122; i++) {
+
+        if (str.charCodeAt(i) !== (str.charCodeAt(i + 1) - 1)) {
+
+            return String.fromCharCode(str.charCodeAt(i) + 1);
+
+        }
+
     }
-  }
-  return undefined;
+
+    return undefined;
+
 }
 
-console.log(fearNotLetter("abce"));
+console.log(fearNotLetter("abcdefghijklmnopqrstuvwxyz"));
