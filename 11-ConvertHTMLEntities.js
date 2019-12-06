@@ -23,3 +23,21 @@ function convertHTML(str) {
 }
 
 convertHTML("Dolce & Gabbana");
+
+//Can also be done entirely on object and methods...
+
+function convertHTML(str) {
+    
+    let charsObj = {
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        "\'": "&apos;",
+        "\"": "&quot;"
+    }
+
+    return str.split('').map(x => charsObj[x] || x).join('');
+
+}
+
+convertHTML("Dolce & Gabbana");
