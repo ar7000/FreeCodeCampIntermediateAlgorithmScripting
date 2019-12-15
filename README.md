@@ -27,3 +27,6 @@ console.log(testFunc(1,2,3)); //Would log [1,2,3] to console
     console.log(destroyer([3, 5, 1, 2, 2], 2, 3, 5)); //Would log [1] to console.
 
     ```
+
+
+*Little to report on this module as mainly consists of completing tasks based on what has already been learned.*
